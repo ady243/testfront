@@ -1,0 +1,42 @@
+.container__auth{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.form__group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.form__group label {
+    font-size: 18px;
+    margin-bottom: 0.3rem;
+}
+
+.box__auth{
+    width: 600px;
+    height: 600px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    padding: 20px;
+}
+
+.title__auth{
+    font-size: 34px;
+    font-weight: 800;
+    margin: 2rem 10px;
+    text-align: center;
+    background: #61dafb;
+}
+
+.form__control {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
