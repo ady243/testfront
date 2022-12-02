@@ -13,8 +13,6 @@ const Router = () => (
     <Route path="products/edit/:id" element={<EditProduct />} />
     <Route path="products/new" element={<AddProduct />} />
     <Route path="*" element={<NotFoundPage />} />
-
-    {/*<Route path="*" element={<Navigate to="/"/>}/>*/}
   </Routes>
 );
 
