@@ -4,7 +4,6 @@ import { useSelector } from "react-redux";
 import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import { Grid, Paper, styled } from "@mui/material";
-import ResponsiveAppBar from "../../layouts/header/Header";
 
 const fetchProducts = async () => {
   const response = await fetch("http://localhost:4000/api/products");
@@ -22,8 +21,7 @@ const Item = styled(Paper)(({ theme }) => ({
 const Products = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
-  const data = useSelector((state) => state.products);
+  const [, setError] = useState(null);
 
   useEffect(() => {
     setLoading(true);
@@ -60,13 +58,11 @@ const Products = () => {
                         sx={{ marginRight: "10px", background: "#F295A3" }}
                         variant="contained"
                       >
-                        {" "}
                         Voir le produit
                       </Button>
                     </Link>
                     <Link to={`/products/edit/${product._id}`}>
                       <Button sx={{ marginLeft: "10px" }} variant="contained">
-                        {" "}
                         Modifier le produit
                       </Button>
                     </Link>

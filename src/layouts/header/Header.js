@@ -6,12 +6,10 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 
 import Container from "@mui/material/Container";
-
+import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
 
 import AdbIcon from "@mui/icons-material/Adb";
-
-// const pages = ["Add Product"];
 
 function ResponsiveAppBar() {
   return (
@@ -36,9 +34,12 @@ function ResponsiveAppBar() {
           >
             HOME
           </Typography>
-          <Button sx={{ marginLeft: "auto" }} variant="contained">
-            ADD PRODUCT
-          </Button>
+
+          <Link to={`products/new`} variant="contained">
+            <Button sx={{ marginLeft: "1165px" }} variant="contained">
+              ADD PRODUCT
+            </Button>
+          </Link>
         </Toolbar>
       </Container>
     </AppBar>
