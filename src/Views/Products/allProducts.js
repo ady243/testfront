@@ -13,7 +13,7 @@ const fetchProducts = async () => {
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
   ...theme.typography.body2,
-  padding: theme.spacing(5),
+  padding: theme.spacing(2),
   textAlign: "center",
   color: theme.palette.text.secondary,
 }));
@@ -58,12 +58,12 @@ const Products = () => {
                         sx={{ marginRight: "10px", background: "#F295A3" }}
                         variant="contained"
                       >
-                        Voir le produit
+                        See the product
                       </Button>
                     </Link>
                     <Link to={`/products/edit/${product._id}`}>
                       <Button sx={{ marginLeft: "10px" }} variant="contained">
-                        Modifier le produit
+                        Modify the product
                       </Button>
                     </Link>
                   </Item>

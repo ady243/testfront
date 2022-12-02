@@ -15,32 +15,73 @@ a {
   box-shadow: 40%;
   position: relative;
 }
+
+.add {
+  display: grid;
+  text-align: center;
+  border-style: none;
+  background-color: white;
+  text-decoration: none;
+  overflow: auto;
+  border: 40px;
+}
+
 h1 {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 p {
   text-decoration: none;
 }
-button {
-  display: flex;
-  align-items: center;
-  width: 230px;
-  height: 64px;
-  padding: 0 0 0 18px;
+.dlt {
+  background-color: #1362ee;
   border: 0;
-  background-color: #ff2c6c;
-  font-size: 22px;
-  font-weight: 400px;
-  font-family: "Euclid Circular A";
-  color: #f9f9f9;
-  text-align: left;
+  width: 75px;
   cursor: pointer;
-  transition: 0.3s;
+  box-shadow: 20%;
+}
+.dlt:hover {
+  background-color: red;
+}
+.available {
+  display: flex;
+  margin-left: 45%;
+  margin-top: 20px;
+}
+
+.edt {
+  cursor: pointer;
+  box-shadow: 20%;
+  margin-left: 80px;
+}
+.edt:hover {
+  color: aqua;
+}
+
+.edit_product {
+  text-align: center;
 }
 
 .button-text {
   flex: 0 0 130px;
 }
+.add_product {
+  height: 20px;
+  width: 10%;
+  border: 0;
+  border-radius: 8%;
+  box-shadow: 5rem;
+  background-color: #1362ee;
+  align-items: center;
+  cursor: pointer;
+}
+
+.input {
+  border: 0;
+  background-color: white;
+  height: 25px;
+  border-radius: 8%;
+}
+
 .animation {
   overflow: hidden;
   position: relative;

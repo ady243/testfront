@@ -45,7 +45,7 @@ export const EditProduct = () => {
   };
 
   return (
-    <div sx={{}} variant="contained">
+    <div className="edit_product" variant="contained">
       <h1>Edit product</h1>
       {error && <div>{error.message}</div>}
       <form onSubmit={handleSubmit}>

@@ -13,7 +13,7 @@ function DeleteBtn() {
       ClassName={isDeleteting ? "deleting" : ""}
       disabled={isDeleteting}
     >
-      <span className="button-left">
+      <span className="button-text">
         {isDeleteting ? "Deleting..." : "Delete User"}
       </span>
       <span className="animation">

@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { InputLabel } from "@mui/material";
+import AddIcon from "@mui/icons-material/Add";
 
 const addProduct = async (product) => {
   const response = await fetch("http://localhost:4000/api/products", {
@@ -40,53 +42,57 @@ export const AddProduct = () => {
 
   return (
     <>
-      <div>
+      <div variant="contained" className="add">
         <h1>Add a product</h1>
         {error && <div>{error.message}</div>}
         <form onSubmit={handleSubmit}>
-          <label htmlFor="name">Name</label>
+          <InputLabel htmlFor="name">Name</InputLabel>
           <input
             type="text"
             id="name"
             value={name}
             onChange={(event) => setName(event.target.value)}
           />
-          <label htmlFor="type">Type</label>
+          <InputLabel htmlFor="type">Type</InputLabel>
           <input
             type="text"
             id="type"
             value={type}
             onChange={(event) => setType(event.target.value)}
           />
-          <label htmlFor="price">Price</label>
+          <InputLabel htmlFor="price">Price</InputLabel>
           <input
             type="text"
             id="price"
             value={price}
             onChange={(event) => setPrice(event.target.value)}
           />
-          <label htmlFor="rating">Rating</label>
+          <InputLabel htmlFor="rating">Rating</InputLabel>
           <input
             type="text"
             id="rating"
             value={rating}
             onChange={(event) => setRating(event.target.value)}
           />
-          <label htmlFor="warrantyYears">Warranty years</label>
+          <InputLabel htmlFor="name">warranty years</InputLabel>
           <input
             type="text"
             id="warrantyYears"
             value={warrantyYears}
             onChange={(event) => setWarrantyYears(event.target.value)}
           />
-          <label htmlFor="available">Available</label>
-          <input
-            type="checkbox"
-            id="available"
-            checked={available}
-            onChange={(event) => setAvailable(event.target.checked)}
-          />
-          <button type="submit">Add</button>
+          <div className="available">
+            <InputLabel htmlFor="available">Available</InputLabel>
+            <input
+              type="checkbox"
+              id="available"
+              checked={available}
+              onChange={(event) => setAvailable(event.target.checked)}
+            />
+            <button type="submit" className="add_product">
+              ADD
+            </button>
+          </div>
         </form>
       </div>
     </>

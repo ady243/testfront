@@ -1,9 +1,9 @@
 import { Link, useParams } from "react-router-dom";
 import EditIcon from "@mui/icons-material/Edit";
+import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import { useEffect, useState } from "react";
-import { blue } from "@mui/material/colors";
+
 import { Button } from "@mui/material";
-// import ResponsiveAppBar from "../../layouts/header/Header";
 
 const deleteProduct = async (id) => {
   const response = await fetch(`http://localhost:4000/api/products/${id}`, {
@@ -57,13 +57,13 @@ export const ShowProduct = () => {
         <p>
           <b>Available: {product.available ? "Yes" : "No"}</b>
         </p>
-        <button onClick={() => handleDelete(product._id)}>
-          Delete product
+        <button className="dlt" onClick={() => handleDelete(product._id)}>
+          <DeleteOutlineIcon />
         </button>
 
-        <Link to={`/products/edit/${product._id}`}>
+        <Link className="edt" to={`/products/edit/${product._id}`}>
           <Button>
-            Edit <EditIcon />
+            <EditIcon />
           </Button>
         </Link>
       </div>
