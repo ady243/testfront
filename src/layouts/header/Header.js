@@ -35,7 +35,7 @@ function ResponsiveAppBar() {
             HOME
           </Typography>
 
-          <Link to={`products/new`} variant="contained">
+          <Link to={`/products/new`} variant="contained">
             <Button sx={{ marginLeft: "1165px" }} variant="contained">
               ADD PRODUCT
             </Button>

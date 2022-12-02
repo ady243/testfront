@@ -24,7 +24,15 @@ export const AddProduct = () => {
     event.preventDefault();
     try {
       // TODO: redirect to products page
-      window.location.href = "/allProducts";
+      const product = await addProduct({
+        name,
+        type,
+        price,
+        rating,
+        warrantyYears,
+        available,
+      });
+      window.location.href = "/";
     } catch (error) {
       setError(error);
     }
